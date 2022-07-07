@@ -10,5 +10,10 @@ function count() {
         clearInterval(countInterval);
     }
 }
+removeEventListener('click',timer)
 }
-addEventListener("click", timer)
+
+
+
+addEventListener('click', timer) 
+
