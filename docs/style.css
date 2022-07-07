@@ -1,0 +1,37 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+display: flex;
+margin: 0;
+padding: 0;
+flex-direction: column;
+}
+
+header {
+
+}
+
+.test-scores {
+font-family: calibri;
+color: #ba58e5;
+padding: 0px 20px;
+
+}
+
+main p {
+text-align: center;
+font-family:calibri;
+font-size: 35px;
+padding: 0 25%
+}
+
+.page-title{
+text-align: center;
+font-family:calibri;
+font-weight: bold;
+font-size: 80px;
+margin: 20px;
+padding: 40px 0px 0px 0px;
+}
