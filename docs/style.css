@@ -9,6 +9,7 @@ padding: 0;
 flex-direction: column;
 }
 
+/*header styled to have the timer and high scores on same line*/
 header {
 display: flex;
 justify-content: space-between;
@@ -20,6 +21,13 @@ font-family: calibri;
 color: #ba58e5;
 padding: 0px 20px;
 
+}
+
+p {
+text-align: center;
+font-family:calibri;
+font-size: 35px;
+padding: 0 25%
 }
 
 main p {
@@ -38,6 +46,7 @@ margin: 20px;
 padding: 40px 0px 0px 0px;
 }
 
+/*set button to dark purple ID and white text*/
 .mainbtn {
 margin: auto;
 display: flex;
@@ -50,6 +59,7 @@ color: #fff;
 border-radius: 12px;
 }
 
+/*button changes to a light pink when hovered over*/
 .mainbtn:hover {
 background-color: #ba58e5;
 }
@@ -77,6 +87,24 @@ margin: 30px 30px 0 30px;
 font-size: 30px;
 }
 
+.wrongright {
+color: lightgrey;
+font-style: italic;
+text-align: center;
+font-family:calibri;
+font-weight: bold;
+font-size: 50px;
+margin: 20px;
+}
+
+.typebox {
+flex: 100%;
+width: 100%;
+flex-basis: 100%;
+}
+
+/*created hide style to hide blocks of html until JS allows them to be revealed. Also hides unwanted <div> elements in HTML*/
 .hide {
     display: none;
 }
+

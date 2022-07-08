@@ -4,43 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Created Javascript quiz title-->
     <title>JavaScript Quiz</title>
+    <!--referenced style sheet within same folder using ./-->
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
 </head>
 
 <body>
-    
+
     <header>
+        <!--created View high scores at top left of page-->
         <h1 class="test-scores">View high scores</h1>
+        <!--set up initial time with id to display on the page as the counter counts down in js-->
         <div class="timer" id="js_timer">
         </div>
     </header>
-
-    <main id = "main" class = "">
+    <div id = "main">
         <div>
+        <!--created title page with class page-title-->
         <h1 class="page-title">Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         </div>
+        <!--created start button-->
         <div>
         <button id="main-btn" class="mainbtn" type="click">Start Quiz</button>
         </div>
-    </main>
+    </div>
 
+    <!--Question 1 with id of question1 will be unhidden upon start button click by removing the class "hide" below-->
     <div id = "question1" class="hide">
         <h1 class="page-title">Commonly used data types DO NOT include:</h1>
         <div>
-            <button class="quizbtn" type="click">1. Strings</button>
-            <button class="quizbtn" type="click">2. Booleans</button>
-            <button class="quizbtn" type="click">1. Alerts</button>
-            <button class="quizbtn" type="click">1. Numbers</button>
+            <!--created 4 buttons for question 1-->
+            <button id="q1b1" class="quizbtn" type="click">1. Strings</button>
+            <button id="q1b2" class="quizbtn" type="click">2. Booleans</button>
+            <button id="q1b3" class="quizbtn" type="click">3. Alerts</button>
+            <button id="q1b4" class="quizbtn" type="click">4. Numbers</button>
+            <!--Answer: q1b3 Alerts-->
         </div>
     </div>
-
-
-
+    <div id = "question2" class="hide">
+        <h1 class="page-title">Which of the following is the HTML element we use for JavaScript?</h1>
+        <div>
+            <button id="q2b1" class="quizbtn" type="click">1. javascript</button>
+            <button id="q2b2" class="quizbtn" type="click">2. script</button>
+            <button id="q2b3" class="quizbtn" type="click">3. js</button>
+            <button id="q2b4" class="quizbtn" type="click">4. scripting</button>
+            <!--Answer: q2b2 script-->
+        </div>
+    </div>
+    <div id = "question3" class="hide">
+        <h1 class="page-title">How can you comment out code in JavaScript?</h1>
+        <div>
+            <button id="q3b1" class="quizbtn" type="click">1. !--comment--!</button>
+            <button id="q3b2" class="quizbtn" type="click">2. ""comment""</button>
+            <button id="q3b3" class="quizbtn" type="click">3. /comment/</button>
+            <button id="q3b4" class="quizbtn" type="click">4. /*comment*/</button>
+            <!--Answer: q3b4 /*comment*/-->
+        </div>
+    </div>
+    <div id = "question4" class="hide">
+        <h1 class="page-title">Which operator assigns a variable in JavaScript?</h1>
+        <div>
+            <button id="q4b1" class="quizbtn" type="click">1. x</button>
+            <button id="q4b2" class="quizbtn" type="click">2. -</button>
+            <button id="q4b3" class="quizbtn" type="click">3. *</button>
+            <button id="q4b4" class="quizbtn" type="click">4. =</button>
+            <!--Answer: q4b4 =-->
+        </div>
+    </div>
+    <div id = "question5" class="hide">
+        <h1 class="page-title">What method do we use to create an event listener?</h1>
+        <div>
+            <button id="q5b1" class="quizbtn" type="click">1. EventListener</button>
+            <button id="q5b2" class="quizbtn" type="click">2. addEventListener</button>
+            <button id="q5b3" class="quizbtn" type="click">3. CreateListen</button>
+            <button id="q5b4" class="quizbtn" type="click">4. EventListen</button>
+            <!--Answer: q5b2 addEventListener-->
+        </div>
+    </div>
+    <div id = "question6" class="hide">
+        <h1 class="page-title">Is JavaScript case sensitive?</h1>
+        <div>
+            <button id="q6b1" class="quizbtn" type="click">1. Only inside functions</button>
+            <button id="q6b2" class="quizbtn" type="click">2. Only typing methods</button>
+            <button id="q6b3" class="quizbtn" type="click">3. Never</button>
+            <button id="q6b4" class="quizbtn" type="click">4. Yes</button>
+            <!--Answer: q6b4 Yes-->
+        </div>
+    </div>
+    <div id = "lastpage" class="hide">
+        <h1 class="page-title">All done!</h1>
+        <p id="finalscore"></p>
+        <div>
+            <input type="type" class="typebox" name="Enter Initials" placeholder="Enter Initials" />
+            <button class="mainbtn" type="click">submit</button>
+            <!--Answer: Yes-->
+        </div>
+    </div>
+    <div class="wrongright" id="right1">
+    </div>
+    <!--referenced javascript within same folder using ./-->
+    <script src="./script.js"></script>
 </body>
-
-
 
 </html>
