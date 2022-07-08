@@ -98,9 +98,12 @@ margin: 20px;
 }
 
 .typebox {
-flex: 100%;
-width: 100%;
-flex-basis: 100%;
+display: flex;
+flex-flow: column;
+align-items: center;
+text-align: center;
+margin: 10px 6px 10px 0;
+flex: 1;
 }
 
 /*created hide style to hide blocks of html until JS allows them to be revealed. Also hides unwanted <div> elements in HTML*/

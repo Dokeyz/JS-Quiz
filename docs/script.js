@@ -1,6 +1,6 @@
 //start button constant to be clicked by event listener to activate timer and first question appearing
 const startButton = document.getElementById('main-btn');
-
+const lastButton = document.getElementById('last-btn');
 //list of constants for question 1's buttons:
 const q1b1 = document.getElementById('q1b1')
 const q1b2 = document.getElementById('q1b2')
@@ -222,7 +222,11 @@ function quiz() {
     q6b3.addEventListener('click', () => q6exit(false));
     q6b4.addEventListener('click', () => q6exit(true));
 
+    function last () {
+        document.getElementById("thankyou").innerHTML = "Your final score of " + score + "% has been stored, thank you and have a nice day.";
+    }
 
+    lastButton.addEventListener('click',last)
 
 }
 
