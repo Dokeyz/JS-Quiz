@@ -41,15 +41,17 @@ const q6b4 = document.getElementById('q6b4')
 function quiz() {
     let counter = 60;
     let score = 0;
+    //created timer function
     var timer = function () {
-
+        //timer counts down in 1 second intervals
         var countInterval = setInterval(count, 1000);
-
+        //this function displays the timer on the web page and if it reaches 0 then it goes to the final page
         function count() {
             console.log(counter--);
             document.getElementById("js_timer").innerHTML = "Timer: " + counter;
-            if (counter === -1) {
+            if (counter <= 0) {
                 clearInterval(countInterval);
+                    //adds a class to hide all questions and reveals the "final page"
                     const question1 = document.getElementById('question1')
                     question1.classList.add('hide')
                     const question2 = document.getElementById('question2')
@@ -67,6 +69,7 @@ function quiz() {
                 }
             }
         }
+        //once the main start button is clicked, the main page is hidden and the first question is revealed
     var mainexit = function () {
         removeEventListener('click', timer)
         const main = document.getElementById('main')
@@ -76,18 +79,20 @@ function quiz() {
         question1.classList.remove('hide')
 
     }
+    //once the first question is answered, the second question is revealed, and so forth
     function q1exit(correct) {
         const question1 = document.getElementById('question1')
         question1.classList.add('hide')
 
         const question2 = document.getElementById('question2')
         question2.classList.remove('hide')
-        
+        //if the correct button is clicked, the player recieves a portion of the 100% score (1/6) and is met with a "correct" message
         if (correct) {
             document.getElementById("right1").innerHTML = "Correct :)";
             score = score + 16.66;
             console.log(score);
         }
+        //if the user clicks an incorrect answer, the timer is reduced by 10 seconds and they are met with a "wrong" message
         else {
             document.getElementById("right1").innerHTML = "Wrong :(";
             counter = counter -10;
@@ -182,9 +187,11 @@ function quiz() {
         document.getElementById("finalscore").innerHTML = "Your final score is " + score + "%";
     }
     
-    
+    //the start button is pasted twice because it activates the 60 second timer and also removes the main page
     startButton.addEventListener('click', timer)
     startButton.addEventListener('click', mainexit)
+
+    //created an event listener for each question's buttons, assigning false values to incorrect options and true values to correct options
     q1b1.addEventListener('click', () => q1exit(false));
     q1b2.addEventListener('click', () => q1exit(false));
     q1b3.addEventListener('click', () => q1exit(true));
